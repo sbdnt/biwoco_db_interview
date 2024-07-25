@@ -1,30 +1,29 @@
-# Biwoco_db_interview
-An academic institution is undergoing a significant modernization effort, and they need a new database system to effectively manage their complex operations. As a skilled database designer, you have been tasked with creating a comprehensive and efficient database schema.
+# Academic Institution Database Design
 
-# List entities:
 ## Building
-name:
-location:
+name,
+location,
 
-## Departments
-name:
-dean_id:
-bulding_id:
+
+## Department
+name,
+dean_id,
+bulding_id,
 
 ## Room
-name:
-deparment_id:
+name,
+deparment_id,
 
 ## Major
-id:
-name:
-department_id:
+id,
+name,
+department_id,
 
 
 ##  Syllabus
-id:
-name:
-major_id:
+id,
+name,
+major_id,
 
 
 ## Semester
@@ -33,124 +32,124 @@ major_id
 
 
 ## Course
-name: 
-instructor_id:
-credit_hours:
-schedule:
-deparment_id:
-semester_id:
-description:
+name, 
+instructor_id,
+credit_hours,
+schedule,
+deparment_id,
+semester_id,
+description,
 
 
 ## Subject
-name:
-courses_id:
-room_id:
-description:
+name,
+courses_id,
+room_id,
+description,
 
 
-## Attendance:
-id:
-student_id:
-subject_id:
+## Attendance
+id,
+student_id,
+subject_id,
 
 
 ## Assignment
-id:
-name:
-subject_id:
+id,
+name,
+subject_id,
 
 
 ## Quiz
-id:
-name:
-course_id:
-description:
+id,
+name,
+course_id,
+description,
 
 
 ## Exam
-id:
-name:
-semester_id:
-description:
+id,
+name,
+semester_id,
+description,
 
 
 ## LearningOutcome
-id:
-name:
-semester_id:
-student_id:
+id,
+name,
+semester_id,
+student_id,
 
 
 ## Professor
-id
-name
-deparment_id
+id,
+name,
+deparment_id,
 
 ## Lecturer
-id
-name
-department_id
+id,
+name,
+department_id,
 
 ## TeachingAssistant
-id
-name
-lecturer_id
+id,
+name,
+lecturer_id,
 
 
 ## Students
-id: 
-name:
-major_id:
-address:
-phone_number:
+id, 
+name,
+major_id,
+address,
+phone_number,
 
-## Publications:
-id
-title
-type:
-publication_date
+## Publications,
+id,
+title,
+type,
+publication_date,
 author_id
 
 
 ## ResearchProject
-id:
-name:
-major_id:
+id,
+name,
+major_id,
 
 
 ## Club
-id:
-name:
-deparment_id:
+id,
+name,
+deparment_id,
 
 
 ## Library
-id:
-name:
-location:
+id,
+name,
+location,
 
 
 ## Book
-id:
-name:
-author:
-major_id:
+id,
+name,
+author,
+major_id,
 
 
 ## Resource
-id:
-name:
-type:
-room_id:
+id,
+name,
+type,
+room_id,
 
 ## SupportServices
-id:
-name:
-description:
+id,
+name,
+description,
 
 
-# Queries:
+# Queries,
 
 
 ```python
@@ -173,6 +172,7 @@ FROM Publications
 JOIN Professor_Publication ON Publications.publication_id = Professor_Publication.publication_id
 JOIN Professors ON Professor_Publication.professor_id = Professors.professor_id
 WHERE Professors.professor_name = 'Specific_Professor_Name' AND Publications.publication_date >= DATE_SUB(CURDATE(), INTERVAL 5 YEAR);
+
 ```
 
 
@@ -186,6 +186,7 @@ JOIN Course ON Enrollment.course_id = Course.id
 JOIN Major ON Course.major_id = Major.id
 WHERE Major.name = 'Computer Science'
 GROUP BY Student.id;
+
 ```
 
 
@@ -198,6 +199,7 @@ JOIN Department ON Course.department_id = Department.id
 JOIN Semester ON Course.semester_id = Semester.id
 WHERE Department.id = 'Department ID'
 AND Semesters.id = 'Semester ID';
+
 ```
 
 
