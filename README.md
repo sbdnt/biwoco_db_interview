@@ -1,157 +1,144 @@
-# Academic Institution Database Design
+# Academic Institution Database Design.
 
-## Building
+# Project Description:
+An academic institution is undergoing a significant modernization effort, and they need a new
+database system to effectively manage their complex operations. As a skilled database
+designer.
+
+# List entities
+
+## 01.Building
 name,
-location,
+location
 
-
-## Department
+## 02.Department
 name,
 dean_id,
-bulding_id,
+bulding_id
 
-## Room
+## 03.Room
 name,
-deparment_id,
+deparment_id
 
-## Major
+## 04.Major
 id,
 name,
-department_id,
+department_id
 
-
-##  Syllabus
+##  05.Syllabus
 id,
 name,
-major_id,
+major_id
 
-
-## Semester
+## 06.Semester
 name
 major_id
 
-
-## Course
+## 08.Course
 name, 
 instructor_id,
 credit_hours,
 schedule,
 deparment_id,
 semester_id,
-description,
+description
 
-
-## Subject
+## 09.Subject
 name,
 courses_id,
 room_id,
-description,
+description
 
-
-## Attendance
+## 10.Attendance
 id,
 student_id,
-subject_id,
+subject_id
 
-
-## Assignment
+## 11.Assignment
 id,
 name,
-subject_id,
+subject_id
 
-
-## Quiz
+## 12.Quiz
 id,
 name,
 course_id,
-description,
+description
 
-
-## Exam
+## 13.Exam
 id,
 name,
 semester_id,
-description,
+description
 
-
-## LearningOutcome
+## 14.LearningOutcome
 id,
 name,
 semester_id,
-student_id,
+student_id
 
-
-## Professor
+## 15.Professor
 id,
 name,
-deparment_id,
+deparment_id
 
-## Lecturer
+## 16.Lecturer
 id,
 name,
-department_id,
+department_id
 
-## TeachingAssistant
+## 17.TeachingAssistant
 id,
 name,
-lecturer_id,
+lecturer_id
 
-
-## Students
+## 18.Students
 id, 
 name,
 major_id,
 address,
-phone_number,
+phone_number
 
-## Publications
+## 19.Publications
 id,
 title,
 type,
 publication_date,
 author_id
 
-
-## ResearchProject
+## 20.ResearchProject
 id,
 name,
-major_id,
+major_id
 
-
-## Club
+## 21.Club
 id,
 name,
-deparment_id,
+deparment_id
 
-
-## Library
+## 22.Library
 id,
 name,
-location,
+location
 
-
-## Book
+## 23.Book
 id,
 name,
 author,
-major_id,
+major_id
 
-
-## Resource
+## 24.Resource
 id,
 name,
 type,
-room_id,
+room_id
 
-## SupportServices
+## 25.SupportServices
 id,
 name,
-description,
+description
 
-
-# Queries
-
-
+# Queries Sample
 ```python
 - List all students enrolled in a specific course, along with their grades.
 
