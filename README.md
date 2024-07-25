@@ -31,7 +31,7 @@ name,
 major_id
 
 ## 06.Semester
-name
+name,
 major_id
 
 ## 08.Course
