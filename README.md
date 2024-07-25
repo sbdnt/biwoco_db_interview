@@ -104,7 +104,7 @@ major_id,
 address,
 phone_number,
 
-## Publications,
+## Publications
 id,
 title,
 type,
@@ -149,7 +149,7 @@ name,
 description,
 
 
-# Queries,
+# Queries
 
 
 ```python
